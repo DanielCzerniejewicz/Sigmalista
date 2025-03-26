@@ -1,0 +1,56 @@
+CREATE DATABASE IF NOT EXISTS `Podpierdalacze`; 
+USE `Podpierdalacze`;
+
+CREATE TABLE IF NOT EXISTS `Punktacja` ( 
+    ID_Kategori INT(2) AUTO_INCREMENT PRIMARY KEY, 
+    Kategoria VARCHAR(255),
+    Punktacja INT(2) 
+);
+
+CREATE TABLE IF NOT EXISTS `Bonusy` ( 
+    ID_Bonusu INT(2) AUTO_INCREMENT PRIMARY KEY,  -- Dodajemy AUTO_INCREMENT jako klucz podstawowy
+    Kategoria VARCHAR(255),
+    Punktacja INT(2)
+);
+
+CREATE TABLE IF NOT EXISTS `Sygnalisci` ( 
+    ID_Sygnalisty INT(5) PRIMARY KEY AUTO_INCREMENT, 
+    Ksywa VARCHAR(40) NOT NULL 
+);
+
+CREATE TABLE IF NOT EXISTS `Userzy` ( 
+    ID_Usera INT AUTO_INCREMENT PRIMARY KEY, 
+    Ksywa VARCHAR(50) NOT NULL, 
+    Haslo VARCHAR(50) NOT NULL,
+    Ranga VARCHAR(50) NOT NULL 
+);
+
+CREATE TABLE IF NOT EXISTS `Podjebki` ( 
+    ID_Podjebki INT(5) AUTO_INCREMENT PRIMARY KEY, 
+    ID_Sygnalisty INT(5), 
+    Kategoria VARCHAR(255),
+    Ksywa VARCHAR(50)
+);
+
+-- Wstawianie danych do tabeli Punktacja
+INSERT INTO Punktacja(Kategoria, Punktacja) 
+VALUES 
+  ("Przypadkowe nieumyślne doniesienie", 1), 
+  ("Niby nieumyślne doniesienie", 5), 
+  ("Bez świadków, nauczycielowi", 10), 
+  ("Przypomnienie o domowym bez świadków", 20), 
+  ("Przypomnienie o domowym z świadkami", 30), 
+  ("Doniesienie na grupkę ludzi", 40), 
+  ("Anonimowe przypomnienie o kartkówce", 50), 
+  ("Jawne przypomnienie o kartkówce", 60), 
+  ("Puszczenie ploty w celu zniszczenia relacji", 70), 
+  ("Nadgorliwość na lekcjach", 80);
+
+-- Wstawianie danych do tabeli Bonusy
+INSERT INTO Bonusy(Kategoria, Punktacja) 
+VALUES 
+  ("Doniesienie na najlepszego kumpla", 20), 
+  ("Posiadanie dowodu na osobę", 50), 
+  ("Spotkanie się z ofiarą w ciągu tygodnia", 100);
+
+INSERT INTO Userzy(Ksywa,Haslo,Ranga) VALUES ("Jokur","Balagan123","Admin")

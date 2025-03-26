@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f1f1f1;
+}
+
+#logowanie {
+    background-color: #ffffff;
+    width: 30%;
+    height: 30%;
+    border: 3px solid #8A2BE2;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#login, #haslo {
+    text-align: center;
+    display: flex;
+    width: 98%;
+    height: 6vh;
+    border: 2px solid #8A2BE2;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+
+#login input, #haslo input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+#login input:focus, #haslo input:focus {
+    border: 1px solid #8A2BE2;
+    box-shadow: 0px 0px 5px rgba(138, 43, 226, 0.5);
+}
+
+#zaloguj {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 99%;
+    height: 6vh;
+    background-color: #8A2BE2;
+    border: 3px solid #ffffff;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#zaloguj:hover {
+    background-color: #7a1be1;
+    transition: background-color 0.3s ease;
+}
+
