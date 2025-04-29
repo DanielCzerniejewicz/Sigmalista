@@ -52,5 +52,3 @@ VALUES
   ("Doniesienie na najlepszego kumpla", 20), 
   ("Posiadanie dowodu na osobę", 50), 
   ("Spotkanie się z ofiarą w ciągu tygodnia", 100);
-
-INSERT INTO Userzy(Ksywa,Haslo,Ranga) VALUES ("Jokur","Balagan123","Admin")
